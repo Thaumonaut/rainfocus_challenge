@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/app.scss';
+import Menu from './components/Menu'
+import Content from './components/ContentLoader'
+import rf_logo from './RainFocus_Logo.svg'
+import brand_img from './Brand_Img.png'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='sidebar'>
+        <img src={rf_logo} className="offset-logo" />
+        <img src={brand_img} className="rounded-img" />
+        <a>FL</a>
+      </section>
+      <Menu></Menu>
+      <Content></Content>
     </div>
   );
 }
