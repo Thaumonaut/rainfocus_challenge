@@ -53,20 +53,20 @@ export default function Attendees() {
             <div className='instructions'>
                <p className='step-title'><span>Step 1: </span>Base settings.</p>
 
-               <ul className='fullwidth-card'>
-                  <li>
+               <div className='fullwidth-card'>
+                  <div className='borderless-card'>
                      <h4>General</h4>
                      <p>Define Attendee types & attributes</p>
-                  </li>
-                  <li>
+                  </div>
+                  <div className='borderless-card'>
                      <h4>Title</h4>
                      <p>Description that explains the value goes here. Description that explains the value goes here. </p>
-                  </li>
-                  <li>
+                  </div>
+                  <div className='borderless-card'>
                      <h4>Title</h4>
                      <p>Description that explains the value goes here. Description that explains the value goes here. </p>
-                  </li>
-               </ul>
+                  </div>
+               </div>
 
                <p className='step-title'><span>Step 2: </span>Build registration workflow</p>
 
