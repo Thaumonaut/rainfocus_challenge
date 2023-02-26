@@ -9,6 +9,24 @@ export default function Attendees() {
 
    const step_2_content = "Start by creating a general registration workflow"
 
+   const registration_cards = [
+      {
+         icon: arrow,
+         title: "Attendee Registration",
+         content: "Start by creating a general registration workflow"
+      },
+      {
+         icon: arrow,
+         title: "Attendee Registration",
+         content: "Start by creating a general registration workflow"
+      },
+      {
+         icon: arrow,
+         title: "Attendee Registration",
+         content: "Start by creating a general registration workflow"
+      },
+   ]
+
    return (
       <section className='attendees'>
          <div className="header">
@@ -18,7 +36,7 @@ export default function Attendees() {
                <p>December 15th</p>
                <p>Lehi, Utah</p>
             </div>
-            <button>Edit Event</button>
+            <button src="/" type='button'>Edit Event</button>
             <div className='attendee-header-information'>
                <h2>Event setup guide</h2>
                <p>See the available list of modules below. We suggest that you start with the attendee module.</p>
@@ -33,68 +51,56 @@ export default function Attendees() {
             </div>
 
             <div className='instructions'>
-               <div className='step'>
-                  <p><span>Step 1: </span>Base settings.</p>
-                  <ul className='step-1'>
-                     <li>
-                        <h4>General</h4>
-                        <p>Define Attendee types & attributes</p>
-                     </li>
-                     <li>
-                        <h4>Title</h4>
-                        <p>Description that explains the value goes here. Description that explains the value goes here. </p>
-                     </li>
-                     <li>
-                        <h4>Title</h4>
-                        <p>Description that explains the value goes here. Description that explains the value goes here. </p>
-                     </li>
-                  </ul>
-               </div>
-               <div className='step'>
-                  <p><span>Step 2: </span>Build registration workflow</p>
-                  <div className='card-grid'>
-                     <Card>
-                        <div className="card-header">
-                           <img src={arrow} />
-                           <h4>{"Attendee Registration"}</h4>
-                        </div>
-                        <p>{step_2_content}</p>
-                     </Card>
-                     <Card>
-                        <div className="card-header">
-                           <img src={arrow} />
-                           <h4>{"Attendee Registration"}</h4>
-                        </div>
-                        <p>{step_2_content}</p>
-                     </Card>
-                     <Card>
-                        <div className="card-header">
-                           <img src={arrow} />
-                           <h4>{"Attendee Registration"}</h4>
-                        </div>
-                        <p>{step_2_content}</p>
-                     </Card>
-                     <Card className="create-card">
-                        <div className="card-header">
-                           <img src={plus} />
-                        </div>
-                        <p>{"Add Registration Workflow"}</p>
-                     </Card>
+               <p className='step-title'><span>Step 1: </span>Base settings.</p>
 
-                  </div>
-               </div>
-               <div className='step'>
-                  <p><span>Step 3: </span>Design post-registration expereinces.</p>
-                  <div className='card-grid'>
+               <ul className='fullwidth-card'>
+                  <li>
+                     <h4>General</h4>
+                     <p>Define Attendee types & attributes</p>
+                  </li>
+                  <li>
+                     <h4>Title</h4>
+                     <p>Description that explains the value goes here. Description that explains the value goes here. </p>
+                  </li>
+                  <li>
+                     <h4>Title</h4>
+                     <p>Description that explains the value goes here. Description that explains the value goes here. </p>
+                  </li>
+               </ul>
+
+               <p className='step-title'><span>Step 2: </span>Build registration workflow</p>
+
+               {/* Create cards from array */}
+               {registration_cards.map(data => {
+                  return (
                      <Card>
                         <div className="card-header">
-                           <img src={computer} />
-                           <h4>{"Attendee Registration"}</h4>
+                           <img alt="arrow icon" src={data.icon} />
+                           <h4>{data.title}</h4>
                         </div>
-                        <p>{step_2_content}</p>
+                        <p>{data.content}</p>
                      </Card>
+                  )
+               })}
+
+               {/* Add Workflow Card */}
+               <Card className="create-card">
+                  <div className="card-header">
+                     <img alt='Plus icon' src={plus} />
                   </div>
+                  <p>{"Add Registration Workflow"}</p>
+               </Card>
+               <p className='step-title'><span>Step 3: </span>Design post-registration expereinces.</p>
+               <div className='card-grid'>
+                  <Card>
+                     <div className="card-header">
+                        <img alt="computer icon" src={computer} />
+                        <h4>{"Attendee Registration"}</h4>
+                     </div>
+                     <p>{step_2_content}</p>
+                  </Card>
                </div>
+               {/* </div> */}
             </div>
 
          </div>

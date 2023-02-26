@@ -12,35 +12,35 @@ export default function Menu() {
             </form>
          </div>
          <ul>
-            <li className="main-link">
-               <div>
+            <li className="link-container">
+               <div className='link' tabIndex={0}>
                   <img src={''} />
-                  <a>Guide</a>
+                  <p>Guide</p>
                </div>
             </li>
-            <li className="main-link">
-               <div className='selected'>
+            <li className="link-container">
+               <div className='selected link' tabIndex={0}>
                   <img src={''} />
-                  <a>Attendees</a>
+                  <p>Attendees</p>
                </div>
-               <ul>
-                  <li>Attendees</li>
-                  <li>Attendee types</li>
-                  <li>Packages</li>
-                  <li>Reg Codes</li>
-                  <li>Discounts</li>
-               </ul>
-            </li>
-            <li className="main-link">
-               <div>
-                  <img src={''} />
-                  <a>Content</a>
+               <div className='sub-menu-list'>
+                  <a href="/">Attendees </a>
+                  <a href="/">Attendee types </a>
+                  <a href="/">Packages </a>
+                  <a href="/">Reg Codes </a>
+                  <a href="/">Discounts </a>
                </div>
             </li>
-            <li className="main-link">
-               <div>
+            <li className="link-container">
+               <div className='link' tabIndex={0}>
                   <img src={''} />
-                  <a>Exhibitors</a>
+                  <p>Content</p>
+               </div>
+            </li>
+            <li className="link-container">
+               <div className='link' tabIndex={0}>
+                  <img src={''} />
+                  <p>Exhibitors</p>
                </div>
             </li>
          </ul>
