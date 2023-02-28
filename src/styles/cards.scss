@@ -1,0 +1,66 @@
+@import '../styles/app.scss';
+
+.card {
+  border: $border;
+  border-radius: $corner-roundness;
+  padding: 28px 32px;
+  margin-bottom: 15px;
+  min-height: 100px;
+
+  .card-header {
+    display: flex;
+  }
+
+  h4 {
+    margin: 0px;
+  }
+
+  img {
+    max-width: 24px;
+    margin-right: 8px;
+  }
+}
+
+.create-card {
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    margin: 5px 0px;
+  }
+
+  img {
+    margin-inline: auto;
+  }
+}
+
+.fullwidth-card {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0px;
+  gap: 0px 32px;
+  border: $border;
+  border-radius: $corner-roundness;
+  padding-inline: 24px;
+
+  .borderless-card {
+    list-style-type: none;
+    margin: 16px 0px;
+    padding: 8px;
+  }
+
+  h4,
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fullwidth-card {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

@@ -1,4 +1,5 @@
 import search from "../images/search.svg";
+import '../styles/menu.scss'
 
 export default function Menu() {
   return (
@@ -10,21 +11,21 @@ export default function Menu() {
         </p>
         <form>
           <input type="search" placeholder="search"></input>
-          <img src={search} className="search-icon" />
+          <img alt="" src={search} className="search-icon" />
         </form>
       </div>
       <ul>
         <li className="link-container">
-          <div className="link" tabIndex={0}>
-            <img src={""} />
+          <a className="link" href="/">
+            <img alt="" src={""} />
             <p>Guide</p>
-          </div>
+          </a>
         </li>
         <li className="link-container">
-          <div className="selected link" tabIndex={0}>
-            <img src={""} />
+          <a className="selected link" href="/">
+            <img alt="" src={""} />
             <p>Attendees</p>
-          </div>
+          </a>
           <div className="sub-menu-list">
             <a href="/">Attendees </a>
             <a href="/">Attendee types </a>
@@ -34,16 +35,16 @@ export default function Menu() {
           </div>
         </li>
         <li className="link-container">
-          <div className="link" tabIndex={0}>
-            <img src={""} />
+          <a className="link" href="/">
+            <img alt="" src={""} />
             <p>Content</p>
-          </div>
+          </a>
         </li>
         <li className="link-container">
-          <div className="link" tabIndex={0}>
-            <img src={""} />
+          <a className="link" href="/">
+            <img alt="" src={""} />
             <p>Exhibitors</p>
-          </div>
+          </a>
         </li>
       </ul>
     </section>

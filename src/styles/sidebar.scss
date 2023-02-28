@@ -1,0 +1,76 @@
+@import "../styles/app.scss";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 80px;
+  max-width: 50px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 16px;
+
+  .profile {
+    background: $paragraph-color;
+    padding: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    color: white;
+
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+
+  img {
+    margin-bottom: 24px;
+    width: 60%;
+    max-width: 48px;
+  }
+}
+
+.offset-logo {
+  position: relative;
+  left: 8px;
+}
+
+.rounded-img {
+  border-radius: $corner-roundness;
+}
+
+@media screen and (max-width: 855px) {
+  .sidebar {
+    min-width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: $border;
+    position: sticky;
+    top: 0px;
+    background: white;
+    z-index: 5;
+
+    .menu-button-container {
+      display: block;
+    }
+
+    .offset-logo {
+      position: relative;
+      bottom: 8px;
+    }
+
+    a:last-child {
+      margin-top: 0px;
+      margin-left: auto;
+      margin-right: 16px;
+    }
+
+    img {
+      margin-bottom: 0px;
+      margin-right: 24px;
+      max-width: 30px;
+    }
+  }
+}

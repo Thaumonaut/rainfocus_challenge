@@ -5,6 +5,9 @@ import plus from "../images/circle-plus.svg";
 import computer from "../images/computer.svg";
 import Card from "./card";
 
+import '../styles/attendees.scss';
+import '../styles/cards.scss';
+
 export default function Attendees() {
   const step_2_content = "Start by creating a general registration workflow";
 
@@ -29,7 +32,7 @@ export default function Attendees() {
   return (
     <section className="attendees">
       <div className="header">
-        <img className="summit-img rounded-img" src={summit_img} />
+        <img alt="" className="summit-img rounded-img" src={summit_img} />
         <div>
           <h1>RainFocus Summit</h1>
           <p>December 15th</p>
@@ -49,7 +52,7 @@ export default function Attendees() {
 
       <div className="main-content">
         <div className="attendee-title">
-          <img src={person_icon} />
+          <img alt="" src={person_icon} />
           <h3>Attendee</h3>
         </div>
 
@@ -115,7 +118,6 @@ export default function Attendees() {
               <p>{step_2_content}</p>
             </Card>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </section>

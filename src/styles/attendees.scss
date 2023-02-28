@@ -1,0 +1,123 @@
+@import '../styles/app.scss';
+
+.attendees {
+  padding-inline: 48px;
+  padding-top: 48px;
+  overflow-y: scroll;
+}
+
+//Attendees header
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr max-content;
+  gap: 0px 16px;
+
+  .summit-img {
+    top: 0px;
+    position: relative;
+    max-height: 90px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 0px;
+    font-size: 16px;
+  }
+
+  button {
+    cursor: pointer;
+    height: 33px;
+    width: 101px;
+    padding: 8px 16px;
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $primary-hover-color;
+    }
+  }
+}
+
+
+.attendee-header-information {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  grid-column: 1/-1;
+
+  border-bottom: $border;
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+}
+
+.attendee-title {
+  display: flex;
+
+  img {
+    max-width: 24px;
+  }
+
+  h3 {
+    margin-left: 24px;
+  }
+}
+
+.step-title {
+  margin-bottom: 8px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.instructions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 8px 24px;
+
+  .step-title {
+    grid-column: 1/-1;
+    margin: 0px;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .attendees {
+    padding-inline: 15px;
+    box-sizing: border-box;
+    overflow-y: unset;
+
+    .header {
+      grid-template-columns: 1fr;
+
+      .summit-img {
+        margin-bottom: 16px;
+      }
+
+      button {
+        margin-top: 16px;
+      }
+    }
+
+    .instructions {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      .step-title {
+        grid-column: 1/-1;
+        margin: 0px;
+        margin-top: 32px;
+      }
+    }
+  }
+}

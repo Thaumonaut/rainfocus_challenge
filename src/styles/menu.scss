@@ -1,0 +1,170 @@
+@import '../styles/app.scss';
+
+//
+// Menu Styles
+//
+
+.menu {
+  padding-inline: 10px;
+  min-width: 220px;
+
+  background-color: white;
+  border-right: $border;
+  border-left: $border;
+
+  .top {
+    padding-inline: 24px;
+
+    input {
+      width: 100%;
+      text-indent: 24px;
+      padding: 5px;
+      border-radius: $corner-roundness;
+      border: $border;
+    }
+
+    form {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 4px;
+        height: 83%;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+}
+
+.menu-button-container {
+  all: unset;
+  display: none;
+  background: white;
+  position: relative;
+  margin-right: 16px;
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  &:focus {
+    outline: auto;
+  }
+}
+
+.menu-button {
+  background-color: #333;
+  height: 2px;
+  width: 50%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    background-color: #333;
+    height: 2px;
+    width: 70%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    background-color: #333;
+    height: 2px;
+    width: 85%;
+  }
+}
+
+.link-container {
+  border-radius: $corner-roundness;
+  cursor: pointer;
+  font-weight: 600;
+  color: #777;
+  font-size: 14px;
+
+  .link:hover,
+  a:hover {
+    background-color: #5c00dc23;
+  }
+
+  .link {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+
+    img {
+      background-color: #777;
+      min-height: 20px;
+      min-width: 20px;
+
+      padding: 5px;
+
+      border-radius: 50%;
+      margin-right: 5%;
+    }
+
+    p {
+      flex: 2;
+      font-size: 14px;
+      position: relative;
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+    }
+  }
+
+  .selected {
+    background-color: #5c00dc14;
+
+    p {
+      color: $primary-color;
+    }
+
+    img {
+      background-color: $primary-color !important;
+    }
+  }
+
+  .sub-menu-list {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: 10px 5px;
+      padding-left: 25%;
+      color: $link-color;
+    }
+  }
+}
+
+
+@media screen and (max-width: 855px) {
+  .menu {
+    display: none;
+  }
+}
